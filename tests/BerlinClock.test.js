@@ -4,27 +4,27 @@ describe("Berlin clock kata project", function() {
     let main = new Main();
     // Etape 1
 
-    it("BerlinClock should return 0 when given 0", function() {
+    it("BerlinClock should return 0000 when given 00:00:00", function() {
         const result = main.getSimpleMinute(0);
         expect(result).toBe("0000");
     });
 
-    it("BerlinClock should return 1 when given 1", function() {
+    it("BerlinClock should return Y000 when given 00:01:00", function() {
         const result = main.getSimpleMinute(1);
         expect(result).toBe("Y000");
     });
 
-    it("BerlinClock should return 2 when given 2", function() {
+    it("BerlinClock should return YY00 when given 00:02:00", function() {
         const result = main.getSimpleMinute(2);
         expect(result).toBe("YY00");
     });
 
-    it("BerlinClock should return 3 when given 3", function() {
+    it("BerlinClock should return YYY0 when given 00:03:00", function() {
         const result = main.getSimpleMinute(3);
         expect(result).toBe("YYY0");
     });
 
-    it("BerlinClock should return 4 when given 4", function() {
+    it("BerlinClock should return YYYY when given 00:04:00", function() {
         const result = main.getSimpleMinute(4);
         expect(result).toBe("YYYY");
     });
@@ -50,8 +50,10 @@ describe("Berlin clock kata project", function() {
         const result = main.getFiveMinutes(40);
         expect(result).toBe("YYRYYRYY000");
     });
-    
+
     //Etape 3
+
+
     //Etape 4
     //Etape 5
     //Etape 6
