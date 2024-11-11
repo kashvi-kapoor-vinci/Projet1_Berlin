@@ -62,9 +62,9 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("YYRYYRY0000\nYYYY");
     });
 
-
     //Etape 3
-
+    
+    
 
     //Etape 4
     //Etape 5
