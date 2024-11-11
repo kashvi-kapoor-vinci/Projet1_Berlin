@@ -1,11 +1,14 @@
 export class Main {
 
-    berlinClock(minutes){ 
-        return this.getSimpleMinute(minutes) + this.getFiveMinutes(minutes);
+    berlinClock(hours,minutes, seconds){ 
+        const fiveMinutes = this.getFiveMinutes(minutes);
+        const simpleMinutes = this.getSimpleMinute(minutes);
+        return `${fiveMinutes}\n${simpleMinutes}`;
     }
 
     getSimpleMinute(minutes){
-        return "Y".repeat(minutes) + "0".repeat(Math.abs(4-minutes));
+        const simpleMinutes = minutes % 5;
+        return "Y".repeat(simpleMinutes) + "0".repeat(Math.abs(4-simpleMinutes));
     }
 
     getFiveMinutes(minutes) {
@@ -26,4 +29,5 @@ export class Main {
 
         return totalLights; 
     }
+
 }
