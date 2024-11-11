@@ -2,7 +2,7 @@ import { Main } from '../src/Berlin-clock.js';
 
 describe("Berlin clock kata project", function() {
     let main = new Main();
-    //simples minutes 
+    // Etape 1
 
     it("BerlinClock should return 0 when given 0", function() {
         const result = main.getSimpleMinute(0);
@@ -29,6 +29,7 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("YYYY");
     });
 
+    //Etape 2
 
     it("BerlinClock should return the correct five minutes blocks when given 5", function() {
         const result = main.getFiveMinutes(5);
@@ -49,4 +50,10 @@ describe("Berlin clock kata project", function() {
         const result = main.getFiveMinutes(40);
         expect(result).toBe("YYRYYRYY000");
     });
+    
+    //Etape 3
+    //Etape 4
+    //Etape 5
+    //Etape 6
+
 });
