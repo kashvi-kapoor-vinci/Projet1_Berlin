@@ -1,5 +1,15 @@
 {
-  "dependencies": {
+  "name": "projet1_berlin",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "Berlin-clock.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Hajji Zahra, Kapoor Kashvi, Sheikh Idries Arwa",
+  "license": "ISC",
+  "devDependencies": {
     "jasmine": "^5.4.0"
   }
 }
