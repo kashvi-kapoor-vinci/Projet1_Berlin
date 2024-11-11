@@ -1,8 +1,8 @@
 export class Main{
 
-    berlinClock(minute){
-        return "Y000";
-        
+    berlinClock(minutes){
+        return "Y".repeat(minutes) + "0".repeat(4 - minutes);
+      
     }
 };
 
