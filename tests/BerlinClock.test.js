@@ -3,6 +3,8 @@ import { Main } from '../src/Berlin-clock.js';
 describe("Berlin clock kata project", function() {
     let main = new Main();
 
+    //simples minutes 
+
     it("BerlinClock should return 0 when given 0", function() {
         const result = main.berlinClock(0);
         expect(result).toBe("0000");
@@ -28,5 +30,27 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("YYYY");
     });
 
+
+    //bloc de 5 minutes
+
+    it("BerlinClock should return the correct five minutes blocks when given 5", function() {
+        const result = main.berlinClock(5);
+        expect(result).toBe("Y0000000000");
+    });
+
+    it("BerlinClock should return the correct five minutes blocks when given 15", function() {
+        const result = main.berlinClock(15);
+        expect(result).toBe("YYR00000000");
+    });
+
+    it("BerlinClock should return the correct five minutes blocks when given 30", function() {
+        const result = main.berlinClock(30);
+        expect(result).toBe("YYRYYR00000");
+    });
+
+    it("BerlinClock should return the correct five minutes blocks when given 40", function() {
+        const result = main.berlinClock(40);
+        expect(result).toBe("YYRYYRYY000");
+    });
 });
 

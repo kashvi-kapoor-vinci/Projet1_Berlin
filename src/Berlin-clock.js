@@ -4,5 +4,10 @@ export class Main{
         return "Y".repeat(minutes) + "0".repeat(4 - minutes);
       
     }
+
+    berlinClock(minutesBloc){
+        return "Y".repeat(minutes) + "0".repeat(4 - minutes) ;
+        if()
+    }
 };
 
