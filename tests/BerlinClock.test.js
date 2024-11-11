@@ -54,17 +54,40 @@ describe("Berlin clock kata project", function() {
     //Etape 1 + 2
     it("BerlinClock should return YYR00000000:Y000 when given 00:16:00", function() {
         const result = main.berlinClock(0,16,0);
-        expect(result).toBe("YYR00000000\nY000");
+        expect(result).toBe("0000\nYYR00000000\nY000");
     });
 
     it("BerlinClock should return YYRYYRY0000:YYYY when given 00:39:00", function() {
         const result = main.berlinClock(0,39,0);
-        expect(result).toBe("YYRYYRY0000\nYYYY");
+        expect(result).toBe("0000\nYYRYYRY0000\nYYYY");
     });
 
     //Etape 3
-    
-    
+    it("BerlinClock should return 0000 when given 00:00:00", function() {
+        const result = main.getSimpleHour(0);
+        expect(result).toBe("0000");
+    });
+
+    it("BerlinClock should return R000 when given 01:00:00", function() {
+        const result = main.getSimpleHour(1);
+        expect(result).toBe("R000");
+    });
+
+    it("BerlinClock should return RR00 when given 02:00:00", function() {
+        const result = main.getSimpleHour(2);
+        expect(result).toBe("RR00");
+    });
+
+    it("BerlinClock should return RRR0 when given 03:00:00", function() {
+        const result = main.getSimpleHour(3);
+        expect(result).toBe("RRR0");
+    });
+
+    it("BerlinClock should return RRRR when given 04:00:00", function() {
+        const result = main.getSimpleHour(4);
+        expect(result).toBe("RRRR");
+    });
+
 
     //Etape 4
     //Etape 5
