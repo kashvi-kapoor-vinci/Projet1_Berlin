@@ -1,5 +1,9 @@
 export class Main {
 
+    // "Y" = Yellow (light on)
+    // "R" = Red (light on)
+    // "0" = Light Off
+
     berlinClock(time){ 
         const second = this.getSeconds(time);
         const fiveHours = this.getFiveHours(time);
@@ -10,7 +14,7 @@ export class Main {
     }
 
     getSimpleMinute(time){
-        const minutes = this.getMinutes(time);
+        const minutes = this.getMinutes(time); // converted time into string of single minutes
         const simpleMinutes = minutes % 5;
         return "Y".repeat(simpleMinutes) + "0".repeat(Math.abs(4-simpleMinutes));
     }
@@ -49,23 +53,22 @@ export class Main {
 
     getSeconds(time){
         const seconds = this.getSecond(time);
-        return seconds % 2 === 0 ? "R" : "0"
+        return seconds % 2 === 0 ? "R" : "0"; // R for even seconds
     }
 
     // convertor
     //23:45:54 -> [23],[45],[54]
     //             0     1    2
     getMinutes(time) {
-        return parseInt(time.split(':')[1])
+        return parseInt(time.split(':')[1]);
     }
 
     getHours(time) {
-        return parseInt(time.split(':')[0])
+        return parseInt(time.split(':')[0]);
     }
 
     getSecond(time) {
-        return parseInt(time.split(':')[2])
+        return parseInt(time.split(':')[2]);
     }
-
 
 }
