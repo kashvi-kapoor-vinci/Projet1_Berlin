@@ -1,11 +1,11 @@
 export class Main {
 
     berlinClock(time){ 
-        const second = this.getSeconds(getSecond(time));
-        const fiveHours = this.getFiveHours(getHours(time));
-        const simpleHour = this.getSimpleHour(getHours(time));
-        const fiveMinutes = this.getFiveMinutes(getMinutes(time));
-        const simpleMinutes = this.getSimpleMinute(getMinutes(time));
+        const second = this.getSeconds(this.getSecond(time));
+        const fiveHours = this.getFiveHours(this.getHours(time));
+        const simpleHour = this.getSimpleHour(this.getHours(time));
+        const fiveMinutes = this.getFiveMinutes(this.getMinutes(time));
+        const simpleMinutes = this.getSimpleMinute(this.getMinutes(time));
         return `${second}\n${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
