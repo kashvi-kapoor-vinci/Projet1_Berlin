@@ -5,7 +5,7 @@ export class Main {
         const simpleHour = this.getSimpleHour(hours);
         const fiveMinutes = this.getFiveMinutes(minutes);
         const simpleMinutes = this.getSimpleMinute(minutes);
-        return `${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
+        return `${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
     getSimpleMinute(minutes){
@@ -38,7 +38,7 @@ export class Main {
     }
 
     getFiveHours(hours) {
-        const fiveHours = hours / 5;
+        const fiveHours = parseInt(hours / 5);
         return "R".repeat(fiveHours) + "0".repeat(Math.abs(4-fiveHours));
     }
 
