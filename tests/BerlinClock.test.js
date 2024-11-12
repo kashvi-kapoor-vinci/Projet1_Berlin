@@ -10,7 +10,7 @@ describe("Berlin clock kata project", function() {
     });
 
     it("BerlinClock should return Y000 when given 00:01:00", function() {
-        const result = main.getSimpleMinute(1);
+        const result = main.getSimpleMinute("00:01:00");
         expect(result).toBe("Y000");
     });
 
@@ -162,5 +162,8 @@ describe("Berlin clock kata project", function() {
         const result = main.berlinClock(21,59,15);
         expect(result).toBe("0\nRRRR\nR000\nYYRYYRYYRYY\nYYYY");
     });
+
+    //Etape 7
+
 
 });
