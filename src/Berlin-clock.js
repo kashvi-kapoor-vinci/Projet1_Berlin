@@ -1,11 +1,12 @@
 export class Main {
 
     berlinClock(hours,minutes, seconds){ 
+        const second = this.getSeconds(seconds);
         const fiveHours = this.getFiveHours(hours);
         const simpleHour = this.getSimpleHour(hours);
         const fiveMinutes = this.getFiveMinutes(minutes);
         const simpleMinutes = this.getSimpleMinute(minutes);
-        return `${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
+        return `${second}\n${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
     getSimpleMinute(minutes){
@@ -40,6 +41,10 @@ export class Main {
     getFiveHours(hours) {
         const fiveHours = parseInt(hours / 5);
         return "R".repeat(fiveHours) + "0".repeat(Math.abs(4-fiveHours));
+    }
+
+    getSeconds(seconds){
+        return seconds % 2 === 0 ? "R" : "0"
     }
 
 }

@@ -52,14 +52,14 @@ describe("Berlin clock kata project", function() {
     });
 
     //Etape 1 + 2
-    it("BerlinClock should return 0000:0000:YYR00000000:Y000 when given 00:16:00", function() {
+    it("BerlinClock should return R:0000:0000:YYR00000000:Y000 when given 00:16:00", function() {
         const result = main.berlinClock(0,16,0);
-        expect(result).toBe("0000\n0000\nYYR00000000\nY000");
+        expect(result).toBe("R\n0000\n0000\nYYR00000000\nY000");
     });
 
-    it("BerlinClock should return 0000:0000:YYRYYRY0000:YYYY when given 00:39:00", function() {
+    it("BerlinClock should return R:0000:0000:YYRYYRY0000:YYYY when given 00:39:00", function() {
         const result = main.berlinClock(0,39,0);
-        expect(result).toBe("0000\n0000\nYYRYYRY0000\nYYYY");
+        expect(result).toBe("R\n0000\n0000\nYYRYYRY0000\nYYYY");
     });
 
     //Etape 3
@@ -89,14 +89,14 @@ describe("Berlin clock kata project", function() {
     });
 
     //Etape 1+2+3
-    it("BerlinClock should return 0000:RR00:YYRYY000000:Y000 when given 02:26:00", function() {
+    it("BerlinClock should return R:0000:RR00:YYRYY000000:Y000 when given 02:26:00", function() {
         const result = main.berlinClock(2,26,0);
-        expect(result).toBe("0000\nRR00\nYYRYY000000\nY000");
+        expect(result).toBe("R\n0000\nRR00\nYYRYY000000\nY000");
     });
 
-    it("BerlinClock should return 0000:RRRR:YYRYYRYYRYY:YYYY when given 04:59:00", function() {
+    it("BerlinClock should return R:0000:RRRR:YYRYYRYYRYY:YYYY when given 04:59:00", function() {
         const result = main.berlinClock(4,59,0);
-        expect(result).toBe("0000\nRRRR\nYYRYYRYYRYY\nYYYY");
+        expect(result).toBe("R\n0000\nRRRR\nYYRYYRYYRYY\nYYYY");
     });
 
 
@@ -129,25 +129,25 @@ describe("Berlin clock kata project", function() {
     
     //Etape 1+2+3+4
 
-    it("BerlinClock should return RRR0:RR00:00000000000:0000 when given 17:00:00", function() {
+    it("BerlinClock should return R:RRR0:RR00:00000000000:0000 when given 17:00:00", function() {
         const result = main.berlinClock(17,0,0);
-        expect(result).toBe("RRR0\nRR00\n00000000000\n0000");
+        expect(result).toBe("R\nRRR0\nRR00\n00000000000\n0000");
     });
 
-    it("BerlinClock should return RRRR:R000:YYRYYRYYRYY:YYYY when given 21:59:00", function() {
+    it("BerlinClock should return R:RRRR:R000:YYRYYRYYRYY:YYYY when given 21:59:00", function() {
         const result = main.berlinClock(21,59,0);
-        expect(result).toBe("RRRR\nR000\nYYRYYRYYRYY\nYYYY");
+        expect(result).toBe("R\nRRRR\nR000\nYYRYYRYYRYY\nYYYY");
     });
 
     //Etape 6
 
     it("BerlinClock should return R when given even second", function(){
-        const result = main.berlinClock(2);
+        const result = main.getSeconds(2);
         expect(result).toBe("R");
     });
 
     it("BerlinClock should return 0 when given odd second", function(){
-        const result = main.berlinClock(1);
+        const result = main.getSeconds(1);
         expect(result).toBe("0");
     });
 
