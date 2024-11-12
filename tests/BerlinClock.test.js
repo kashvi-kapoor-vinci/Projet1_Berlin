@@ -101,7 +101,32 @@ describe("Berlin clock kata project", function() {
 
 
     //Etape 4
-    //Etape 5
+
+    it("BerlinClock should return 0000 when given 00:00:00", function() {
+        const result = main.getFiveHours(0);
+        expect(result).toBe("0000");
+    });
+
+    it("BerlinClock should return R000 when given 05:00:00", function() {
+        const result = main.getFiveHours(5);
+        expect(result).toBe("R000");
+    });
+
+    it("BerlinClock should return RR00 when given 10:00:00", function() {
+        const result = main.getFiveHours(10);
+        expect(result).toBe("RR00");
+    });
+
+    it("BerlinClock should return RRR0 when given 15:00:00", function() {
+        const result = main.getFiveHours(15);
+        expect(result).toBe("RRR0");
+    });
+
+    it("BerlinClock should return RRRR when given 20:00:00", function() {
+        const result = main.getFiveHours(20);
+        expect(result).toBe("RRRR");
+    });
+    
     //Etape 6
 
 });
