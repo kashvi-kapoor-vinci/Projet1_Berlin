@@ -127,6 +127,18 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("RRRR");
     });
     
+    //Etape 1+2+3+4
+
+    it("BerlinClock should return RRR0:RR00:00000000000:0000 when given 17:00:00", function() {
+        const result = main.berlinClock(17,0,0);
+        expect(result).toBe("RRR0\nRR00\n00000000000\n0000");
+    });
+
+    it("BerlinClock should return RRRR:R000:YYRYYRYYRYY:YYYY when given 21:59:00", function() {
+        const result = main.berlinClock(21,59,0);
+        expect(result).toBe("RRRR\nR000\nYYRYYRYYRYY\nYYYY");
+    });
+
     //Etape 6
 
 });
