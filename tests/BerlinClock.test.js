@@ -141,4 +141,14 @@ describe("Berlin clock kata project", function() {
 
     //Etape 6
 
+    it("BerlinClock should return R when given even second", function(){
+        const result = main.berlinClock(2);
+        expect(result).toBe("R");
+    });
+
+    it("BerlinClock should return 0 when given odd second", function(){
+        const result = main.berlinClock(1);
+        expect(result).toBe("0");
+    });
+
 });
