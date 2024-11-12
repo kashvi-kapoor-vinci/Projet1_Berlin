@@ -1,20 +1,22 @@
 export class Main {
 
     berlinClock(time){ 
-        const second = this.getSeconds(this.getSecond(time));
-        const fiveHours = this.getFiveHours(this.getHours(time));
-        const simpleHour = this.getSimpleHour(this.getHours(time));
-        const fiveMinutes = this.getFiveMinutes(this.getMinutes(time));
-        const simpleMinutes = this.getSimpleMinute(this.getMinutes(time));
+        const second = this.getSeconds(time);
+        const fiveHours = this.getFiveHours(time);
+        const simpleHour = this.getSimpleHour(time);
+        const fiveMinutes = this.getFiveMinutes(time);
+        const simpleMinutes = this.getSimpleMinute(time);
         return `${second}\n${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
-    getSimpleMinute(minutes){
+    getSimpleMinute(time){
+        const minutes = this.getMinutes(time);
         const simpleMinutes = minutes % 5;
         return "Y".repeat(simpleMinutes) + "0".repeat(Math.abs(4-simpleMinutes));
     }
 
-    getFiveMinutes(minutes) {
+    getFiveMinutes(time) {
+        const minutes = this.getMinutes(time);
         const lightOn = Math.floor(minutes / 5); 
         let totalLights = ""; 
 
@@ -33,17 +35,20 @@ export class Main {
         return totalLights; 
     }
 
-    getSimpleHour(hours) {
+    getSimpleHour(time) {
+        const hours = this.getHours(time);
         const simpleHour = hours % 5;
         return "R".repeat(simpleHour) + "0".repeat(Math.abs(4-simpleHour));
     }
 
-    getFiveHours(hours) {
+    getFiveHours(time) {
+        const hours = this.getHours(time);
         const fiveHours = parseInt(hours / 5);
         return "R".repeat(fiveHours) + "0".repeat(Math.abs(4-fiveHours));
     }
 
-    getSeconds(seconds){
+    getSeconds(time){
+        const seconds = this.getSecond(time);
         return seconds % 2 === 0 ? "R" : "0"
     }
 
