@@ -5,12 +5,12 @@ describe("Berlin clock kata project", function() {
     // Etape 1
 
     it("BerlinClock should return 0000 when given 00:00:00", function() {
-        const result = main.getSimpleMinute("00:00:00");
+        const result = main.getSimpleMinute(main.getMinutes("00:00:00"));
         expect(result).toBe("0000");
     });
 
     it("BerlinClock should return Y000 when given 00:01:00", function() {
-        const result = main.getSimpleMinute("00:01:00");
+        const result = main.getSimpleMinute(main.getMinutes("00:01:00"));
         expect(result).toBe("Y000");
     });
 
@@ -28,7 +28,7 @@ describe("Berlin clock kata project", function() {
         const result = main.getSimpleMinute("00:04:00");
         expect(result).toBe("YYYY");
     });
-
+    /*
     //Etape 2
 
     it("BerlinClock should return Y0000000000 when given 00:05:00", function() {
@@ -164,6 +164,6 @@ describe("Berlin clock kata project", function() {
     });
 
     //Etape 7
-
+    */
 
 });

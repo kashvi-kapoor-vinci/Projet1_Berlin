@@ -48,7 +48,8 @@ export class Main {
     }
 
     // convertor
-    //23:45:54 -> 
+    //23:45:54 -> [23],[45],[54]
+    //             0     1    2
     getMinutes(time) {
         return parseInt(time.split(':')[1])
     }
