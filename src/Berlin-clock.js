@@ -1,9 +1,9 @@
 export class Main {
 
     berlinClock(time){ 
-        const second = this.getSeconds(seconds);
-        const fiveHours = this.getFiveHours(hours);
-        const simpleHour = this.getSimpleHour(hours);
+        const second = this.getSeconds(getSecond(time));
+        const fiveHours = this.getFiveHours(getHours(time));
+        const simpleHour = this.getSimpleHour(getHours(time));
         const fiveMinutes = this.getFiveMinutes(getMinutes(time));
         const simpleMinutes = this.getSimpleMinute(getMinutes(time));
         return `${second}\n${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
@@ -56,5 +56,10 @@ export class Main {
     getHours(time) {
         return parseInt(time.split(':')[0])
     }
+
+    getSecond(time) {
+        return parseInt(time.split(':')[2])
+    }
+
 
 }
