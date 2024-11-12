@@ -164,6 +164,11 @@ describe("Berlin clock kata project", function() {
     });
 
     //Etape 7
+
+    it("BerlinClock should return 0:0000:RRRR:YYRY0000000:YYY0 when given 04:23:33", function() {
+        const result = main.berlinClock("04:23:33");
+        expect(result).toBe("0\n0000\nRRRR\nYYRY0000000\nYYY0");
+    });
     
 
 });
